@@ -1,6 +1,8 @@
+// import the required dependencies for the app
 import React from "react";
 import LabelledInput from "./LabelledInput";
 import './App.css';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -38,6 +40,7 @@ class App extends React.Component {
   }
 
   render() {
+    // calculate the BMI before the render
     var BMI = ( this.state.mass == 0 || this.state.height == 0 ) 
           ? 0 
           : ( this.state.mass / ( ( this.state.height / 100 ) ** 2 ) ).toFixed(2);
@@ -68,12 +71,14 @@ class App extends React.Component {
         <div className="result-pane">
           <h2>{"BMI( Body Mass Index )"}</h2>
 
+          {/* the BMI  */}
           <span className="result">
                   { 
                     BMI
                   }
           </span>
 
+          {/* the BMI range indicator */}
           <h3>
             {
               ( BMI < 18.5 )

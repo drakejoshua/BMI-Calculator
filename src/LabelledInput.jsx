@@ -1,3 +1,4 @@
+// import the required dependencies for the app
 import React from "react";
 import PropTypes from "prop-types";
 
@@ -22,6 +23,7 @@ class LabelledInput extends React.Component {
 }
 
 
+// add type-checking for the props using prop-types
 LabelledInput.propTypes = {
     onChange: PropTypes.func.isRequired,
     inputID: PropTypes.string.isRequired,

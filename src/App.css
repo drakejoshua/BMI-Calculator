@@ -1,11 +1,15 @@
+/* import the required google font */
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
+
+/* general base styling for all elements */
 * {
   box-sizing: border-box;
   color: black;
   font-family: 'Josefin Sans', cursive;
 }
 
+/* styling the root elements */
 #root {
   width: 80%;
   margin: 0 auto;
@@ -14,6 +18,7 @@
 }
 
 
+/* styling the app render */
 .app {
   display: flex;
   padding: 50px 30px;
@@ -24,7 +29,7 @@
 }
 
 
-
+/* styling the input pane on the render */
 div.input-pane {
   width: 45%;
 }
@@ -52,6 +57,7 @@ div.labelled-input > input {
 }
 
 
+/* styling the result pane on the render */
 div.result-pane {
   flex-grow: 1;
 }
@@ -64,6 +70,7 @@ div.result-pane > h3 {
 }
 
 
+/* adding mobile responsiveness to the page */
 @media screen and ( max-width: 500px ) {
   div.input-pane {
     width: 100%;
