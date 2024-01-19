@@ -38,7 +38,9 @@ class App extends React.Component {
   }
 
   render() {
-    var BMI = ( this.state.mass / ( ( this.state.height / 100 ) ** 2 ) ).toFixed(2);
+    var BMI = ( this.state.mass == 0 || this.state.height == 0 ) 
+          ? 0 
+          : ( this.state.mass / ( ( this.state.height / 100 ) ** 2 ) ).toFixed(2);
 
     return (
       <div className="app">
@@ -48,7 +50,7 @@ class App extends React.Component {
 
           <LabelledInput 
             onChange={this.handleMassChange} 
-            labelText="Mass(kg):" 
+            labelText="Weight(kg):" 
             placeholder="Enter your mass in Kg"
             inputID = "mass-input"
           />
@@ -68,9 +70,7 @@ class App extends React.Component {
 
           <span className="result">
                   { 
-                    ( this.state.mass == 0 || this.state.height == 0 ) 
-                      ? 0 
-                      : BMI
+                    BMI
                   }
           </span>
 

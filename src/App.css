@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+* {
+  box-sizing: border-box;
+  color: black;
+  font-family: 'Josefin Sans', cursive;
+}
+
+#root {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.app {
+  display: flex;
+  padding: 50px 30px;
+  background-color: white;
+  border-radius: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+div.input-pane {
+  width: 45%;
+}
+div.labelled-input:last-child {
+  margin-top: 20px;
+}
+div.labelled-input {
+  display: flex;
+  gap: 10px 0px;
+  flex-direction: column;
+}
+div.labelled-input > label {
+  display: block;
+  text-align: left;
+}
+div.labelled-input > input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+
+
+div.result-pane {
+  flex-grow: 1;
+}
+div.result-pane > span.result {
+  font-size: 3rem;
+  font-weight: bold;
+}
+div.result-pane > h3 {
+  text-transform: capitalize;
+}
+
+
+@media screen and ( max-width: 500px ) {
+  div.input-pane {
+    width: 100%;
+  }
+
+  #root {
+    width: 98%;
+  }
+
+  .app {
+    gap: 30px 0px;
+  }
+}
